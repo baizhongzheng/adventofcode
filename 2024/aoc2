@@ -1,0 +1,15 @@
+/AOC 2
+a:read0 `$"todel\\aoc2.txt"
+a:read0 `$"todel\\aoc2test.txt"
+b:{"J"$" "vs x}each a
+//part1
+sum {isInc:x~asc x;
+ isDec:x~desc x;
+ a:abs 1_deltas x;
+ (isInc or isDec) and (all (a>=1) and a<=3)}each b
+//part2
+check:{isInc:x~asc x;
+ isDec:x~desc x;
+ a:abs 1_deltas x;
+ (isInc or isDec) and (all (a>=1) and a<=3)};
+sum {any {[x;ind] check x where not ind=(til count x)}[x;] each til count x}each b
