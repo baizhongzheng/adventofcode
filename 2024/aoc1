@@ -1,0 +1,11 @@
+/AOC 1
+/a:("JJ";",") 0: `$"todel\\aoc1test.csv"
+/a:("JJ";",") 0: `$"todel\\aoc1.csv"
+a:read0 `$"todel\\aoc2.txt"
+a:read0 `$"todel\\aoc1test.txt"
+b:{"JJ"$"   "vs x}each a
+b:flip b
+//part1
+sum abs (asc b 1)- asc b 0
+//part2
+sum{x*count where y in x}[;a 1]each a 0
